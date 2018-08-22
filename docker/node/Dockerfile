@@ -27,27 +27,21 @@ RUN yum install -y \
 &&  yum groupinstall "Development Tools" -y \
 &&  yum clean all
 
+RUN curl --silent --location https://rpm.nodesource.com/setup_10.x | bash - \
+    && yum -y install nodejs \
+    && npm -g up \
+    && npm install -g forever \
+    && npm install -g hotnode \
+    && npm install -g @vue/cli
+
 RUN yum -y update && \
     yum -y install epel-release && \
     yum -y install git make autoconf curl wget && \
     yum -y install gcc-c++ glibc-headers openssl-devel readline libyaml-devel readline-devel zlib zlib-devel sqlite-devel bzip2 && \
     yum clean all
 
-# nginxをインストール
-RUN echo '[nginx]' > /etc/yum.repos.d/nginx.repo \
-&&  echo 'name=nginx repo' >> /etc/yum.repos.d/nginx.repo \
-&&  echo 'baseurl=http://nginx.org/packages/mainline/centos/7/$basearch/' >> /etc/yum.repos.d/nginx.repo \
-&&  echo 'gpgcheck=0' >> /etc/yum.repos.d/nginx.repo \
-&&  echo 'enabled=1' >> /etc/yum.repos.d/nginx.repo
+ADD docker/node/scripts/start.sh /tmp/start.sh
 
-ADD docker/web/conf/nginx/default.conf /tmp/default.conf
-ADD docker/web/scripts/start.sh /tmp/start.sh
-
-RUN yum install nginx -y
-
-RUN ln -s /work_vue/pub /usr/share/nginx/html/.
-
-# nodejs project & nginxを起動
-EXPOSE 80
+EXPOSE 3000
 
 CMD ["bash", "/tmp/start.sh"]

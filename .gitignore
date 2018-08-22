@@ -17,11 +17,8 @@
 !/log/.keep
 !/tmp/.keep
 
-# Ignore uploaded files in development
-/storage/*
-
-/public/assets
-.byebug_history
-
 # Ignore environment setting(for docker-compose env)
 .env
+
+/nodeproj/node_modules
+/nodeproj2/node_modules

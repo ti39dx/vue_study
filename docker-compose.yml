@@ -9,8 +9,24 @@ services:
     build:
       context: .
       dockerfile: ./docker/web/Dockerfile
+    container_name: "vue-web"
     ports:
       - "8080:80"
+    tty: true
+    volumes:
+      - .:/work_vue
+      - datashare:/datashare
+    links:
+      - 'vue-node'
+  vue-node:
+    build:
+      context: .
+      dockerfile: ./docker/node/Dockerfile
+    container_name: "vue-node"
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
     tty: true
     volumes:
       - .:/work_vue
