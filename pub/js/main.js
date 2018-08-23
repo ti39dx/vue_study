@@ -110,3 +110,16 @@ var app9 = new Vue({
     }
   }
 })
+
+// コンポーネントを先に登録しないとコケる！
+var comp_app10 = Vue.component('app10', {
+  props: ['text'],
+  template: '<span>OK! [{{ text }}]</span>'
+})
+
+var app10 = new Vue({
+  el: '#app-10',
+  data: {
+    text :"Hi, My Name is vue sample!"
+  }
+})
