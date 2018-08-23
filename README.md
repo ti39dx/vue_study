@@ -16,3 +16,20 @@
 * nginx
   * 設定はマスタOSにあるファイルを使用
 * Vue.js(2.5.1)
+
+# 動かしかた
+
+```
+docker-compose build
+docker-compose up
+```
+
+でサーバーが動くので、あとは
+
+`http://localhost:3000`
+
+や
+
+`http://localhost:8080`
+
+で動くと思います
