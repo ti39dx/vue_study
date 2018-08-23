@@ -30,6 +30,6 @@ docker-compose up
 
 や
 
-`http://localhost:8080`
+`http://localhost:8080/pub/`
 
 で動くと思います
