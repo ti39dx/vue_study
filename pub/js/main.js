@@ -123,3 +123,14 @@ var app10 = new Vue({
     text :"Hi, My Name is vue sample!"
   }
 })
+
+var app11 = new Vue({
+  el: '#app-11',
+  data: {
+    pairs : [
+      {id:"1", data:"a"},
+      {id:"2", data:"b"},
+      {id:"3", data:"c"}
+    ]
+  }
+})
