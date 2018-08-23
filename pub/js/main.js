@@ -82,3 +82,31 @@ var app8 = new Vue({
     }
   }
 })
+
+var app9 = new Vue({
+  el: '#app-9',
+  data: {
+    link_idx: 0,
+    link_list: [
+      {url: 'https://www.google.co.jp', title: 'google'},
+      {url: 'https://www.yahoo.co.jp', title: 'Yahoo!'}
+    ],
+    url: '',
+    link_title: ''
+  },
+  methods: {
+    onclick: function(event){
+      this.link_idx = (this.link_idx+1) % this.link_list.length;
+      this.url = this.link_list[this.link_idx].url;
+      this.title = this.link_list[this.link_idx].title;
+    }
+  },
+  computed: {
+    show_url: function(){
+      return this.link_list[this.link_idx].url;
+    },
+    show_title: function(){
+      return this.link_list[this.link_idx].title;
+    }
+  }
+})
