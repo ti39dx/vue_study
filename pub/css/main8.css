@@ -1,0 +1,30 @@
+#app-12 {
+  width: auto;
+  height: 240px;
+  background-color: purple;
+}
+
+#app-12-1 {
+  width: 120px;
+  height: 120px;
+  border: 1px solid black;
+  background-color: yellow;
+  overflow: scroll;
+}
+
+#space {
+  width: auto;
+  height: 24px;
+}
+
+#app-13 {
+  width: auto;
+  height: 240px;
+  background-color: #8484f0;
+}
+
+#app-13-1 {
+  width: 240px;
+  height: 160px;
+  overflow: scroll;
+}
