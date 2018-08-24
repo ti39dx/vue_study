@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Vue.js test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <link rel="stylesheet" type="text/css" media="screen" href="/pub/css/main10.css" />
+</head>
+<body>
+  <div id="app-15" class="app-1X">
+    <div id="app-15-1" class="app-15-x">
+      <input v-model="message" placeholder="edit me">
+    </div>
+    <div id="app-15-2" class="app-15-x">
+      <p>Message is: {{ message }}</p>
+    </div>
+  </div>
+  <div class="space"></div>
+  <div id="app-16" class="app-1X">
+    <div id="app-16-1" class="app-16-x">
+      <input type="radio" id="one" value="One" v-model="picked">
+      <label for="one">One</label>
+    </div>
+    <div id="app-16-2" class="app-16-x">
+      <input type="radio" id="two" value="Two" v-model="picked">
+      <label for="two">Two</label>
+    </div>
+    <div id="app-16-3" class="app-16-x">
+      <span>Picked: {{ picked }}</span>
+    </div>
+  </div>
+  <div class="space"></div>
+  <div id="app-17" class="app-1X">
+    <div id="app-17-1" class="app-17-x">
+      <select v-model="selected">
+        <option disabled value="">Please Select One</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+      </select>
+    </div>
+    <div id="app-17-2" class="app-17-x">
+        <span>Selected: {{ selected }}</span>
+      </div>
+  </div>
+  <script src="/pub/js/vue.js"></script>
+  <script src="/pub/js/main10.js"></script>
+</body>
+</html>
