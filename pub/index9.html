@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Vue.js test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <link rel="stylesheet" type="text/css" media="screen" href="/pub/css/main9.css" />
+</head>
+<body>
+  <div id="app-14">
+    <!-- 今の所、passive は意味はない -->
+    <div id="app-14-1" v-on:scroll.passive="onScroll">
+      <span v-html="text"></span>
+    </div>
+    <input type="text" v-on:keyup.space="enterSpace">
+    <p>入力ボックスでスペースキーを押してみよう！</p>
+  </div>
+  <script src="/pub/js/vue.js"></script>
+  <script src="/pub/js/main9.js"></script>
+</body>
+</html>
