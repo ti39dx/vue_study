@@ -46,6 +46,7 @@ ADD docker/web/scripts/start.sh /tmp/start.sh
 RUN yum install nginx -y
 
 RUN ln -s /work_vue/pub /usr/share/nginx/html/.
+RUN ln -s /work_vue/nodes /usr/share/nginx/html/.
 
 # nodejs project & nginxを起動
 EXPOSE 80

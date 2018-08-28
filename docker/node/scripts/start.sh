@@ -3,7 +3,7 @@
 #npm install express --save
 #hotnode index.js
 TMPCACHE=/tmp/temporary-cache
-if [ ! -f ${TMPCACHE} ]; then
+if [ ! -e ${TMPCACHE} ]; then
   mkdir ${TMPCACHE}
 fi
 cd /work_vue/nodeproj2
