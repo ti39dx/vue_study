@@ -1,0 +1,16 @@
+div.app-1X {
+  width: auto;
+  height: 160px;
+  position: relative;
+  border: 1px solid black;
+  background: url(/pub/img/bg_app13-1.jpg);
+}
+
+div.space {
+  width: auto;
+  height: 24px;
+}
+
+td {
+  color: red;
+}
