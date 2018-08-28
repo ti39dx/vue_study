@@ -1,0 +1,28 @@
+div.app-1X {
+  width: auto;
+  height: 160px;
+  position: relative;
+  border: 1px solid black;
+  background: url(/pub/img/bg_app13-1.jpg);
+}
+
+div.space {
+  width: auto;
+  height: 24px;
+}
+
+.demo-alert-box {
+  width: 480px;
+  height: 128px;
+  line-height: 128px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #ff6060;
+  border: 4px solid #800000;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+  margin: auto;
+}
