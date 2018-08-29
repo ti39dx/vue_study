@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Vue.js test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <link rel="stylesheet" type="text/css" media="screen" href="/pub/css/main16.css" />
+</head>
+<body>
+  <div id="app-23" class="app-1X">
+    <input type="number" v-model="number01" />
+    <input type="numebr" v-model="number02" />
+    <div :class="{isActive: isActive}">{{ sum }}</div>
+    <button @click="isActive = !isActive">赤くする</button>
+  </div>
+  <script src="/pub/js/vue.js"></script>
+  <script src="/pub/js/main16.js"></script>
+</body>
+</html>
