@@ -41,6 +41,8 @@ RUN yum -y update && \
     yum clean all
 
 ADD docker/node/scripts/start.sh /tmp/start.sh
+ADD docker/node/scripts/run_node.sh /tmp/run_node.sh
+ADD docker/node/scripts/run_nodeproj2.sh /tmp/run_nodeproj2.sh
 
 EXPOSE 3000
 

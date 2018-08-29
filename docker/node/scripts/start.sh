@@ -6,7 +6,4 @@ TMPCACHE=/tmp/temporary-cache
 if [ ! -e ${TMPCACHE} ]; then
   mkdir ${TMPCACHE}
 fi
-cd /work_vue/nodeproj2
-rm -rf node_modules
-npm install --cache ${TMPCACHE}
-npm run serve
+bash
